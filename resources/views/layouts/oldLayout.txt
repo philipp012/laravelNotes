@@ -1,0 +1,19 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <title>{{config('app.name', 'Notes')}}</title>
+</head>
+<body>
+@include('inc.navbar')
+<div class="container pt-5">
+    @include('inc.messages')
+    @yield('content')
+</div>
+<script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace( 'article-ckeditor' );
+</script>
+</body>
+</html>
