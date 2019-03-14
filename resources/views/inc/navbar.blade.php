@@ -1,4 +1,4 @@
-<nav class="navbar navbar navbar-expand-md navbar-dark" style="background-color: #6cb2eb">
+<nav class="navbar navbar navbar-expand-md navbar-dark" style="background-color: #f44336">
     <a class="navbar-brand" href="{{ url('/') }}">
         {{ config('app.name', 'Laravel') }}
     </a>

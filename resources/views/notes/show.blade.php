@@ -3,7 +3,7 @@
 @section('content')
     @auth()
         <h1 style="color: white">{{$note->title}}</h1>
-        <div class="jumbotron" style="background-color: #6cb2eb; color: white">
+        <div class="jumbotron" style="background-color: #f44336; color: white">
             {!!  $note->content !!}
         </div>
         <hr>
