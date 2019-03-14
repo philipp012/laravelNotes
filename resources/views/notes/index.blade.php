@@ -2,11 +2,11 @@
 
 @section('content')
     @auth()
-        <h1>Notes</h1>
+        <h1 style="color: white">Notes</h1>
         @if (count($notes) > 0)
             @foreach($notes as $note)
                 <a href="notes/{{$note->id}}" style="color: black; text-decoration: none">
-                    <div class="card pb-3 pl-2 pt-2" style="box-shadow: 7px 7px 5px grey;">
+                    <div class="card text-white bg-info mb-3 pb-3 pl-2 pt-2" style="-webkit-box-shadow: 11px 10px 46px 6px rgba(0,0,0,0.7);-moz-box-shadow: 11px 10px 46px 6px rgba(0,0,0,0.7);box-shadow: 11px 10px 46px 6px rgba(0,0,0,0.7);">
                         <h3>{{$note->title}}</h3>
                         <small>Written on {{$note->created_at}}</small>
                     </div>
