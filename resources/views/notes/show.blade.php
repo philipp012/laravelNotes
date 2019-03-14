@@ -2,12 +2,12 @@
 
 @section('content')
     @auth()
-        <h1>{{$note->title}}</h1>
-        <div>
+        <h1 style="color: white">{{$note->title}}</h1>
+        <div class="jumbotron" style="background-color: #6cb2eb; color: white">
             {!!  $note->content !!}
         </div>
         <hr>
-        <small>Written on {{$note->created_at}}</small>
+        <small style="color: white">Written on {{$note->created_at}}</small>
 
         <hr>
         <a href="/notes/{{$note->id}}/edit" class="btn btn-primary">Edit</a>
