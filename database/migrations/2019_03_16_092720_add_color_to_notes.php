@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddUserIdToNotes extends Migration
+class AddColorToNotes extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class AddUserIdToNotes extends Migration
     public function up()
     {
         Schema::table('notes', function ($table) {
-            $table->integer('user_id');
+            $table->text('color');
         });
     }
 
@@ -26,7 +26,7 @@ class AddUserIdToNotes extends Migration
     public function down()
     {
         Schema::table('notes', function ($table) {
-            $table->dropColumn('user_id');
+            $table->dropColumn('color');
         });
     }
 }

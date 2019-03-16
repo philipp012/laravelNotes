@@ -3,10 +3,11 @@
 @section('content')
     @auth()
         <h1 style="color: white">{{$note->title}}</h1>
-        <div class="jumbotron" style="background-color: #f44336; color: white">
+        <div class="jumbotron" style="background-color:{{$note->color}}; color: white">
             {!!  $note->content !!}
         </div>
         <hr>
+        <p style="color: white">Color: {{$note->color}}</p>
         <small style="color: white">Written on {{$note->created_at}}</small>
 
         <hr>

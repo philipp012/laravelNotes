@@ -50,13 +50,15 @@ class NotesController extends Controller
     {
         $this->validate($request, [
             'title' => 'required',
-            'content' => 'required'
+            'content' => 'required',
+            'color' => 'required'
         ]);
 
         //Create note
         $note = new Note();
         $note->title = $request->input('title');
         $note->content = $request->input('content');
+        $note->color = $request->input('color');
         $note->user_id = auth()->user()->id;
         $note->save();
 
@@ -100,13 +102,15 @@ class NotesController extends Controller
     {
         $this->validate($request, [
             'title' => 'required',
-            'content' => 'required'
+            'content' => 'required',
+            'color' => 'required'
         ]);
 
         //Create note
         $note = Note::find($id);
         $note->title = $request->input('title');
         $note->content = $request->input('content');
+        $note->color = $request->input('color');
         $note->save();
 
         return redirect('/notes')->with('success', 'Note Updated');
